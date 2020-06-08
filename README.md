@@ -1,2 +1,6 @@
 # ExercicioNvoip
-Mini projeto para operações com clientes
+Desafio para operações com clientes
+
+Feita por Luiz Fernando de Melo Gonçalves.
+
+
