@@ -20,7 +20,7 @@ include_once 'conexao.php';
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css" rel="stylesheet">
 	<link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
 
-	<title>Nvooip</title>
+	<title>NVOIP</title>
 </head>
 
 <body id="fundo">
@@ -34,7 +34,8 @@ include_once 'conexao.php';
 		</div>
 	</nav>
 	<br><br><br><br>
-	<!-- Aqui começa a div para a tabela, puxar o banco de dados para a tabela e etc -->
+
+	<!-- Aqui começa a div do TableModel -->
 	<div>
 		<table id="discoVinil" class="table table-sm table-dark">
 			<thead class="thead-dark">
@@ -72,8 +73,8 @@ include_once 'conexao.php';
 					echo '<td scope="row">' .'<span id="telefone">'. $linha['telefone'] .'</span>'. '</td>';
 				?>
 					<td scope="row">
-						<a href="editar_disco.php?id_vinil=<?php echo $linha['id_vinil']; ?>">
-							<button class="btn btn-success" id="sms" onclick="myFunction()">SMS
+						<a href="telaEnviarSMS.php?id_cliente=<?php echo $linha['id_cliente']; ?>">
+							<button class="btn btn-success" id="sms">SMS
 						
 							</button> <br><br>
 							<a href="deleta_disco.php?id_vinil=<?php echo $linha['id_vinil']; ?>">
@@ -84,11 +85,11 @@ include_once 'conexao.php';
 					</td>
 					
 					<td scope="row">
-						<a href="deletarDisco.php?id_cliente=<?php echo $linha['id_cliente']; ?>">
+						<a href="deletar.php?id_cliente=<?php echo $linha['id_cliente']; ?>">
 							<button class="btn btn-danger">Deletar
 						
 							</button> <br><br>
-							<a href="deleta_disco.php?id_vinil=<?php echo $linha['id_vinil']; ?>">
+							<a href="telaEdita.php?id_cliente=<?php echo $linha['id_cliente']; ?>">
 								<button class="btn btn-info">Editar
 								
 								</button><br><br>

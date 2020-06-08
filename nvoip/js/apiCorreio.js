@@ -62,3 +62,7 @@ else {
     limpa_formulário_cep();
 }
 };
+
+function avisoCadastro() {
+    alert("Cliente Registrado!");
+ }

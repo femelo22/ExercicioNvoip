@@ -2,19 +2,16 @@
 include_once 'conexao.php';
 ?>
 
-
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
-
     <meta charset="UTF-8">
 
     <!-- Metatag responsiva -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <!-- Título-->
-    <title>Nvooip</title>
+    <title>NVOIP</title>
 
     <!-- Icones-->
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
@@ -34,10 +31,14 @@ include_once 'conexao.php';
         v = z.value.toUpperCase();
         z.value = v;
     }
+
+        function avisoCadastro() {
+            alert("Cliente Registrado!");
+        }
     </script>
 
 </head>
-<body background="assets/img/nvoip2.jpg">
+<body background="imagens/nvoip2.jpg">
 
     <div>
         <a href="index.php"><button type="button" class="btn btn-outline-white">Voltar</button></a>
@@ -52,7 +53,7 @@ include_once 'conexao.php';
 
                 <!-- Formulário de cadastro -->
                 <div class="card-body">
-                    <form method="POST" action="cadastrarCliente.php"> 
+                    <form method="POST" action="cadastrar.php"> 
 
                     
                     <div class="form-row">
@@ -138,6 +139,7 @@ include_once 'conexao.php';
                             </div>
                         </div>
                         
+                        <!--              CAMPO TELEFONE COM MÁSCARA              -->
                         <!-- <div class="form-row">
                             <div class="name">Telefone</div>
                                 <div class="input-group-desc">
@@ -149,13 +151,13 @@ include_once 'conexao.php';
                         <div class="form-row">
                             <div class="name">Telefone</div>
                                 <div class="input-group-desc">
-                                    <input class="input--style-5" type="text" name="telefone" id="telefone">
+                                    <input class="input--style-5" type="text" name="telefone" id="telefone" maxlength="11">
                                     <label class="label--desc">Número de Telefone</label>
                                 </div>                         
                         </div></br>  
                        
                         <div>
-                            <button class="btn btn--radius-2 btn--green" type="submit" name="registrar" id="registrar">Registrar</button>
+                            <button class="btn btn--radius-2 btn--green" type="submit" name="registrar" id="registrar" onclick="avisoCadastro()">Registrar</button>
                         </div>
 
                     </form>
@@ -169,7 +171,6 @@ include_once 'conexao.php';
     <script src="vendor/select2/select2.min.js"></script>
     <script src="vendor/datepicker/moment.min.js"></script>
     <script src="vendor/datepicker/daterangepicker.js"></script>
-
     <!-- Main JS-->
     <script src="js/global.js"></script>
 
